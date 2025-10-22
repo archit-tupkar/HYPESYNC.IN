@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>HypeSync Media — Sponsorships & Growth for New Creators</title>
+  <meta name="description" content="HypeSync Media helps new creators find sponsorships and boost social reach. Founded by Archit Tupkar. Contact: 9022406835" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="HypeSync Media" />
+  <meta property="og:description" content="Helping new creators find sponsorships and boost social reach." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HypeSync Media" />
+
+  <!-- Basic styling (neon-indigo dark theme) -->
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --panel:#0f1720;
+      --muted:#9aa3b2;
+      --neon:#7c5cff; /* neon-indigo */
+      --accent:#9fa8ff;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --max-width:1100px;
+      --container-pad:20px;
+      --shadow: 0 8px 30px rgba(12,14,20,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset + base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, var(--bg) 0%, #07080a 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      font-size:16px;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max-width); margin:0 auto; padding:var(--container-pad);}
+
+    /* Header / nav */
+    header{
+      position:sticky; top:0; z-index:40;
+      backdrop-filter: blur(6px);
+      background: linear-gradient(180deg, rgba(7,10,14,0.6), rgba(7,10,14,0.35));
+      border-bottom: 1px solid rgba(125,125,140,0.06);
+    }
+    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .logo-circle{
+      width:48px; height:48px; border-radius:10px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(124,92,255,0.08));
+      box-shadow: 0 6px 18px rgba(124,92,255,0.06), inset 0 -3px 10px rgba(0,0,0,0.4);
+      border:1px solid rgba(124,92,255,0.14);
+    }
+    .logo-circle svg{filter:drop-shadow(0 6px 12px rgba(124,92,255,0.12));}
+    .brand h1{margin:0; font-size:1.125rem; color:var(--neon); letter-spacing:0.2px}
+    .brand p{margin:0; font-size:0.8rem; color:var(--muted);}
+    nav.desktop{display:flex; gap:22px; align-items:center}
+    nav.desktop a{color:var(--muted); font-weight:500; padding:10px 8px; border-radius:8px}
+    nav.desktop a:hover{color:var(--accent); background: rgba(124,92,255,0.04)}
+    .cta{background: linear-gradient(90deg,var(--neon), #a08bff); color:#030312; padding:8px 12px; border-radius:10px; font-weight:600; box-shadow: 0 6px 18px rgba(124,92,255,0.12)}
+    /* Mobile nav */
+    .mobile-toggle{display:none; background:transparent; border:0; color:var(--muted); font-size:18px}
+    .mobile-menu{display:none}
+
+    /* Hero */
+    .hero{padding:56px 0; text-align:center}
+    .hero h2{font-size:clamp(1.6rem,3.6vw,2.8rem); margin:0 0 12px; line-height:1.05; color:#fff}
+    .hero p{max-width:900px; margin:0 auto 18px; color:var(--muted)}
+    .hero .actions{display:flex; gap:12px; justify-content:center; margin-top:18px}
+    .btn-primary{background:linear-gradient(90deg,var(--neon), var(--accent)); color:#0b0f14; padding:12px 18px; border-radius:12px; font-weight:700; box-shadow: 0 10px 30px rgba(92,60,255,0.12)}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:10px 14px; border-radius:10px}
+
+    /* Sections */
+    section{padding:42px 0}
+    .panel{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.02)}
+    .section-title{display:flex; align-items:center; gap:12px; margin-bottom:14px}
+    .section-title h3{margin:0; color:var(--neon); font-size:1.25rem}
+    .muted{color:var(--muted)}
+
+    /* Services grid */
+    .services{display:grid; grid-template-columns:repeat(1,1fr); gap:14px}
+    .service-card{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); border:1px solid rgba(255,255,255,0.02)}
+    .service-card h4{margin:0 0 8px; color:#fff}
+    .service-card p{margin:0; color:var(--muted)}
+
+    /* Contact snippet */
+    .contact-panel{display:flex; flex-direction:column; gap:10px}
+    .contact-row{display:flex; gap:10px; align-items:center}
+    .contact-row strong{color:#fff}
+
+    /* Legal text */
+    .legal-grid{display:grid; gap:12px}
+
+    /* Footer */
+    footer{padding:28px 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); margin-top:30px}
+
+    /* small helper */
+    .pill{background:linear-gradient(90deg, rgba(124,92,255,0.12), rgba(159,168,255,0.04)); padding:6px 10px; border-radius:999px; color:var(--accent); font-weight:600; font-size:.85rem; border:1px solid rgba(124,92,255,0.06)}
+
+    /* Layout responsiveness */
+    @media(min-width:720px){
+      .services{grid-template-columns:repeat(3,1fr)}
+      nav.desktop{display:flex}
+      .mobile-toggle{display:none}
+      .mobile-menu{display:none !important}
+    }
+    @media(max-width:719px){
+      .mobile-toggle{display:inline-flex}
+      nav.desktop{display:none}
+      .mobile-menu{display:block; padding:8px 0}
+      .mobile-menu a{display:block; padding:10px 8px; color:var(--muted); border-radius:8px}
+      .hero{padding:36px 0}
+      .wrap{padding-left:14px; padding-right:14px}
+      .section-title h3{font-size:1.05rem}
+    }
+
+    /* Scroll to top button */
+    #toTop{
+      position:fixed; right:18px; bottom:18px; width:46px; height:46px; border-radius:10px;
+      background:linear-gradient(180deg,var(--neon), #9ca0ff); display:flex; align-items:center; justify-content:center; color:#061016; box-shadow:0 10px 26px rgba(124,92,255,0.12); border:0; cursor:pointer; display:none; z-index:60;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav-inner" style="display:flex;align-items:center;justify-content:space-between">
+      <div class="brand" style="display:flex;align-items:center;gap:12px">
+        <div class="logo-circle" aria-hidden="true">
+          <!-- simple H mark -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="5" width="4" height="14" rx="1" fill="white" opacity="0.92"/>
+            <rect x="10.5" y="5" width="4" height="14" rx="1" fill="white" opacity="0.92"/>
+          </svg>
+        </div>
+        <div>
+          <h1 style="margin:0;font-size:1.05rem;color:var(--neon)">HypeSync Media</h1>
+          <p style="margin:2px 0 0;color:var(--muted);font-size:0.82rem">Empowering new creators</p>
+        </div>
+      </div>
+
+      <nav class="desktop" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#legal">Legal</a>
+        <a class="cta" href="#contact" style="text-decoration:none">Get Started</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-expanded="false" aria-controls="mobileMenu" id="mobileToggle">☰</button>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="mobile-menu wrap" style="display:none;">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#legal">Legal</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h2>Empowering New Creators with Sponsorships &amp; Social Media Growth</h2>
+        <p>HypeSync Media connects rising influencers and content creators with brands and sponsorships that match their vibe — helping you grow your reach and income.</p>
+        <div class="actions">
+          <a class="btn-primary" href="#contact">Start a Conversation</a>
+          <a class="btn-ghost" href="#services">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap panel">
+        <div class="section-title">
+          <h3>About Us</h3>
+          <span class="pill">Founder: Archit Tupkar</span>
+        </div>
+        <p class="muted">HypeSync Media was created to help upcoming creators find sponsorships and collaborations. We make influencer-brand partnerships accessible, transparent and practical — especially for creators who are just starting out. We are currently operating as an independent initiative and are <strong>not yet a legally registered entity</strong> in India.</p>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-title"><h3>Our Services</h3></div>
+        <div class="services">
+          <div class="service-card panel">
+            <h4>Sponsorship Matching</h4>
+            <p class="muted">We match creators with brands that align with their audience and content style. We handle outreach, pitch creation, and negotiation support.</p>
+          </div>
+          <div class="service-card panel">
+            <h4>Social Media Growth</h4>
+            <p class="muted">Strategy, content reviews, growth tactics and optimization across major platforms to increase engagement and follower quality.</p>
+          </div>
+          <div class="service-card panel">
+            <h4>Brand Consultation</h4>
+            <p class="muted">Guidance for both brands and creators to build authentic collaborations and measure campaign success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <div class="wrap panel">
+        <div class="section-title"><h3>How It Works</h3></div>
+        <ol class="muted" style="margin:0 0 0 18px; padding:0;">
+          <li style="margin-bottom:8px"><strong>Sign up:</strong> Creators submit a simple profile and sample links.</li>
+          <li style="margin-bottom:8px"><strong>Matchmaking:</strong> We identify brand fits and prepare pitch kits.</li>
+          <li style="margin-bottom:8px"><strong>Negotiate &amp; Launch:</strong> Support through negotiations and campaign setup.</li>
+          <li style="margin-bottom:8px"><strong>Grow:</strong> Post-campaign analysis and growth recommendations.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap panel contact-panel">
+        <div class="section-title"><h3>Contact Us</h3><span class="pill">Reach out</span></div>
+        <div class="contact-row">
+          <div aria-hidden="true">📞</div>
+          <div><strong>Phone:</strong> <a href="tel:9022406835" style="color:var(--accent)">9022406835</a></div>
+        </div>
+        <div class="contact-row">
+          <div aria-hidden="true">👤</div>
+          <div><strong>Founder:</strong> Archit Tupkar</div>
+        </div>
+        <p class="muted">Have a sponsorship or collaboration idea? Call or message us on the number above. As HypeSync Media is not yet a registered legal entity, please verify terms before entering any commercial agreement.</p>
+      </div>
+    </section>
+
+    <section id="legal">
+      <div class="wrap">
+        <div class="section-title"><h3>Legal • Policies</h3></div>
+        <div class="legal-grid">
+          <div class="panel">
+            <h4 style="margin-top:0;color:var(--neon)">Privacy Policy</h4>
+            <p class="muted">We collect only the information you voluntarily provide through our contact methods. This information is used to respond to inquiries and to deliver services. We do not sell personal data to third parties. We may share data with service providers (email, analytics) under contract to provide the service.</p>
+          </div>
+
+          <div class="panel">
+            <h4 style="margin-top:0;color:var(--neon)">Terms &amp; Conditions</h4>
+            <p class="muted">By using this site you agree to our terms. HypeSync Media is not a registered legal entity yet. We provide matchmaking and advisory services but do NOT guarantee sponsorships. Any engagement should be confirmed in writing. All intellectual property on this site is owned by HypeSync Media unless stated.</p>
+          </div>
+
+          <div class="panel">
+            <h4 style="margin-top:0;color:var(--neon)">Disclaimer</h4>
+            <p class="muted">The content on this website is for general information and does not substitute legal, financial, or professional advice. Users must verify details independently before entering contracts. HypeSync Media is not liable for direct or indirect losses from using this site.</p>
+          </div>
+
+          <div class="panel">
+            <h4 style="margin-top:0;color:var(--neon)">Cookie Policy</h4>
+            <p class="muted">We may use cookies to enhance user experience and analyze site traffic. You can disable cookies in your browser settings; however some features may not work as intended.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
+        <div style="font-size:0.95rem;color:var(--muted)">© <span id="year"></span> HypeSync Media. All Rights Reserved.</div>
+        <div style="font-size:0.86rem;color:var(--muted)">Not a registered legal entity • Use at your own discretion</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" title="Back to top" aria-label="Scroll to top">↑</button>
+
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e){
+        // allow tel: and external anchors to behave normally
+        if(this.getAttribute('href').startsWith('#')){
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if(target){
+            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+            // close mobile menu if open
+            if(window.innerWidth < 720){
+              document.getElementById('mobileMenu').style.display = 'none';
+              document.getElementById('mobileToggle').setAttribute('aria-expanded','false');
+            }
+          }
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobileToggle');
+    if(toggle){
+      toggle.addEventListener('click', () => {
+        const m = document.getElementById('mobileMenu');
+        const isOpen = m.style.display === 'block';
+        m.style.display = isOpen ? 'none' : 'block';
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+    }
+
+    // Show "back to top" on scroll
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 400) toTop.style.display = 'flex'; else toTop.style.display = 'none';
+    });
+    toTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Accessibility: focus outlines for keyboard users
+    document.body.addEventListener('keydown', function(e){
+      if(e.key === 'Tab') document.documentElement.style.setProperty('--focus-outline','2px solid rgba(124,92,255,0.32)');
+    });
+  </script>
+</body>
+</html>
