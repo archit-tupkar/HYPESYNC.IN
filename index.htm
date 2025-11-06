@@ -1,324 +1,738 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HypeSync Media — Sponsorships & Growth for New Creators</title>
-  <meta name="description" content="HypeSync Media helps new creators find sponsorships and boost social reach. Founded by Archit Tupkar. Contact: 9022406835" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="HypeSync Media" />
-  <meta property="og:description" content="Helping new creators find sponsorships and boost social reach." />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="HypeSync Media" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HypeSync Media connects rising influencers and content creators with brands and sponsorships that match their vibe. Grow your reach and income with professional sponsorship matching.">
+    <meta name="keywords"
+        content="influencer marketing, content creator sponsorships, brand partnerships, social media growth, creator economy, influencer matchmaking">
+    <meta name="author" content="HypeSync Media">
+    <meta name="robots" content="index, follow">
 
-  <!-- Basic styling (neon-indigo dark theme) -->
-  <style>
-    :root{
-      --bg:#0b0f14;
-      --panel:#0f1720;
-      --muted:#9aa3b2;
-      --neon:#7c5cff; /* neon-indigo */
-      --accent:#9fa8ff;
-      --glass: rgba(255,255,255,0.03);
-      --radius:12px;
-      --max-width:1100px;
-      --container-pad:20px;
-      --shadow: 0 8px 30px rgba(12,14,20,0.6);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title"
+        content="HypeSync Media - Empowering New Creators with Sponsorships & Social Media Growth">
+    <meta property="og:description"
+        content="Connect with brands and sponsorships that match your vibe. Grow your reach and income as a content creator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hypesyncmedia.com">
+    <meta property="og:image" content="https://hypesyncmedia.com/og-image.jpg">
 
-    /* Reset + base */
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background: linear-gradient(180deg, var(--bg) 0%, #07080a 100%);
-      color:#e6eef8;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-      font-size:16px;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max-width); margin:0 auto; padding:var(--container-pad);}
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HypeSync Media - Empowering New Creators">
+    <meta name="twitter:description" content="Connect with brands and sponsorships that match your vibe.">
+    <meta name="twitter:image" content="https://hypesyncmedia.com/twitter-image.jpg">
 
-    /* Header / nav */
-    header{
-      position:sticky; top:0; z-index:40;
-      backdrop-filter: blur(6px);
-      background: linear-gradient(180deg, rgba(7,10,14,0.6), rgba(7,10,14,0.35));
-      border-bottom: 1px solid rgba(125,125,140,0.06);
-    }
-    .nav-inner{display:flex; align-items:center; justify-content:space-between; gap:16px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .logo-circle{
-      width:48px; height:48px; border-radius:10px;
-      display:inline-flex; align-items:center; justify-content:center;
-      background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(124,92,255,0.08));
-      box-shadow: 0 6px 18px rgba(124,92,255,0.06), inset 0 -3px 10px rgba(0,0,0,0.4);
-      border:1px solid rgba(124,92,255,0.14);
-    }
-    .logo-circle svg{filter:drop-shadow(0 6px 12px rgba(124,92,255,0.12));}
-    .brand h1{margin:0; font-size:1.125rem; color:var(--neon); letter-spacing:0.2px}
-    .brand p{margin:0; font-size:0.8rem; color:var(--muted);}
-    nav.desktop{display:flex; gap:22px; align-items:center}
-    nav.desktop a{color:var(--muted); font-weight:500; padding:10px 8px; border-radius:8px}
-    nav.desktop a:hover{color:var(--accent); background: rgba(124,92,255,0.04)}
-    .cta{background: linear-gradient(90deg,var(--neon), #a08bff); color:#030312; padding:8px 12px; border-radius:10px; font-weight:600; box-shadow: 0 6px 18px rgba(124,92,255,0.12)}
-    /* Mobile nav */
-    .mobile-toggle{display:none; background:transparent; border:0; color:var(--muted); font-size:18px}
-    .mobile-menu{display:none}
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    /* Hero */
-    .hero{padding:56px 0; text-align:center}
-    .hero h2{font-size:clamp(1.6rem,3.6vw,2.8rem); margin:0 0 12px; line-height:1.05; color:#fff}
-    .hero p{max-width:900px; margin:0 auto 18px; color:var(--muted)}
-    .hero .actions{display:flex; gap:12px; justify-content:center; margin-top:18px}
-    .btn-primary{background:linear-gradient(90deg,var(--neon), var(--accent)); color:#0b0f14; padding:12px 18px; border-radius:12px; font-weight:700; box-shadow: 0 10px 30px rgba(92,60,255,0.12)}
-    .btn-ghost{border:1px solid rgba(255,255,255,0.06); color:var(--muted); padding:10px 14px; border-radius:10px}
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    /* Sections */
-    section{padding:42px 0}
-    .panel{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:18px; box-shadow:var(--shadow); border:1px solid rgba(255,255,255,0.02)}
-    .section-title{display:flex; align-items:center; gap:12px; margin-bottom:14px}
-    .section-title h3{margin:0; color:var(--neon); font-size:1.25rem}
-    .muted{color:var(--muted)}
+    <title>HypeSync Media - Empowering New Creators with Sponsorships & Social Media Growth</title>
 
-    /* Services grid */
-    .services{display:grid; grid-template-columns:repeat(1,1fr); gap:14px}
-    .service-card{padding:18px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); border:1px solid rgba(255,255,255,0.02)}
-    .service-card h4{margin:0 0 8px; color:#fff}
-    .service-card p{margin:0; color:var(--muted)}
-
-    /* Contact snippet */
-    .contact-panel{display:flex; flex-direction:column; gap:10px}
-    .contact-row{display:flex; gap:10px; align-items:center}
-    .contact-row strong{color:#fff}
-
-    /* Legal text */
-    .legal-grid{display:grid; gap:12px}
-
-    /* Footer */
-    footer{padding:28px 0; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); margin-top:30px}
-
-    /* small helper */
-    .pill{background:linear-gradient(90deg, rgba(124,92,255,0.12), rgba(159,168,255,0.04)); padding:6px 10px; border-radius:999px; color:var(--accent); font-weight:600; font-size:.85rem; border:1px solid rgba(124,92,255,0.06)}
-
-    /* Layout responsiveness */
-    @media(min-width:720px){
-      .services{grid-template-columns:repeat(3,1fr)}
-      nav.desktop{display:flex}
-      .mobile-toggle{display:none}
-      .mobile-menu{display:none !important}
-    }
-    @media(max-width:719px){
-      .mobile-toggle{display:inline-flex}
-      nav.desktop{display:none}
-      .mobile-menu{display:block; padding:8px 0}
-      .mobile-menu a{display:block; padding:10px 8px; color:var(--muted); border-radius:8px}
-      .hero{padding:36px 0}
-      .wrap{padding-left:14px; padding-right:14px}
-      .section-title h3{font-size:1.05rem}
-    }
-
-    /* Scroll to top button */
-    #toTop{
-      position:fixed; right:18px; bottom:18px; width:46px; height:46px; border-radius:10px;
-      background:linear-gradient(180deg,var(--neon), #9ca0ff); display:flex; align-items:center; justify-content:center; color:#061016; box-shadow:0 10px 26px rgba(124,92,255,0.12); border:0; cursor:pointer; display:none; z-index:60;
-    }
-  </style>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header>
-    <div class="wrap nav-inner" style="display:flex;align-items:center;justify-content:space-between">
-      <div class="brand" style="display:flex;align-items:center;gap:12px">
-        <div class="logo-circle" aria-hidden="true">
-          <!-- simple H mark -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="5" width="4" height="14" rx="1" fill="white" opacity="0.92"/>
-            <rect x="10.5" y="5" width="4" height="14" rx="1" fill="white" opacity="0.92"/>
-          </svg>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle dark mode" id="themeToggle" style="top: 20px;">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo" aria-label="HypeSync Media Home">
+                <span class="logo-text">HypeSync</span>
+                <span class="logo-accent">Media</span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-wrapper">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#legal" class="nav-link">Legal</a></li>
+                </ul>
+
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
         </div>
-        <div>
-          <h1 style="margin:0;font-size:1.05rem;color:var(--neon)">HypeSync Media</h1>
-          <p style="margin:2px 0 0;color:var(--muted);font-size:0.82rem">Empowering new creators</p>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
         </div>
-      </div>
 
-      <nav class="desktop" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#legal">Legal</a>
-        <a class="cta" href="#contact" style="text-decoration:none">Get Started</a>
-      </nav>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">Empowering New Creators</span>
+                    <span class="title-line">with Sponsorships &</span>
+                    <span class="title-line">Social Media Growth</span>
+                </h1>
 
-      <button class="mobile-toggle" aria-expanded="false" aria-controls="mobileMenu" id="mobileToggle">☰</button>
-    </div>
+                <p class="hero-subtitle">
+                    HypeSync Media connects rising influencers and content creators with brands and sponsorships that
+                    match their vibe — helping you grow your reach and income.
+                </p>
 
-    <!-- mobile menu -->
-    <div id="mobileMenu" class="mobile-menu wrap" style="display:none;">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#legal">Legal</a>
-    </div>
-  </header>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Start Your Journey</a>
+                    <a href="#how-it-works" class="btn btn-secondary">Learn How</a>
+                </div>
 
-  <main>
-    <section class="hero">
-      <div class="wrap">
-        <h2>Empowering New Creators with Sponsorships &amp; Social Media Growth</h2>
-        <p>HypeSync Media connects rising influencers and content creators with brands and sponsorships that match their vibe — helping you grow your reach and income.</p>
-        <div class="actions">
-          <a class="btn-primary" href="#contact">Start a Conversation</a>
-          <a class="btn-ghost" href="#services">Our Services</a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Creators Connected</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">Brand Partnerships</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="95">0</span>
+                        <span class="stat-label">Success Rate %</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Growing Community</span>
+                </div>
+                <div class="floating-card card-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <span>Real-Time Analytics</span>
+                </div>
+                <div class="floating-card card-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>Earn More</span>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse"></div>
+        </div>
     </section>
 
-    <section id="about">
-      <div class="wrap panel">
-        <div class="section-title">
-          <h3>About Us</h3>
-          <span class="pill">Founder: Archit Tupkar</span>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Building Bridges Between Creators & Brands</h2>
+                <p class="section-description">
+                    HypeSync Media was created to help upcoming creators find sponsorships and collaborations. We make
+                    influencer-brand partnerships accessible, transparent and practical — especially for creators who
+                    are just starting out.
+                </p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Accessible Partnerships</h3>
+                                <p>We democratize sponsorship opportunities for creators at every stage of their
+                                    journey.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Transparent Process</h3>
+                                <p>Clear communication and honest expectations at every step of the collaboration.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Practical Support</h3>
+                                <p>From pitch creation to negotiation, we're with you throughout your growth journey.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-note">
+                        <p><strong>Note:</strong> We are currently operating as an independent initiative and are not
+                            yet a legally registered entity in India.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="muted">HypeSync Media was created to help upcoming creators find sponsorships and collaborations. We make influencer-brand partnerships accessible, transparent and practical — especially for creators who are just starting out. We are currently operating as an independent initiative and are <strong>not yet a legally registered entity</strong> in India.</p>
-      </div>
     </section>
 
-    <section id="services">
-      <div class="wrap">
-        <div class="section-title"><h3>Our Services</h3></div>
-        <div class="services">
-          <div class="service-card panel">
-            <h4>Sponsorship Matching</h4>
-            <p class="muted">We match creators with brands that align with their audience and content style. We handle outreach, pitch creation, and negotiation support.</p>
-          </div>
-          <div class="service-card panel">
-            <h4>Social Media Growth</h4>
-            <p class="muted">Strategy, content reviews, growth tactics and optimization across major platforms to increase engagement and follower quality.</p>
-          </div>
-          <div class="service-card panel">
-            <h4>Brand Consultation</h4>
-            <p class="muted">Guidance for both brands and creators to build authentic collaborations and measure campaign success.</p>
-          </div>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Offer</span>
+                <h2 class="section-title">Comprehensive Services for Creator Success</h2>
+            </div>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z">
+                            </path>
+                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Sponsorship Matching</h3>
+                    <p class="service-description">
+                        We match creators with brands that align with their audience and content style. We handle
+                        outreach, pitch creation, and negotiation support to secure the best deals for you.
+                    </p>
+                    <ul class="service-features">
+                        <li>Brand alignment analysis</li>
+                        <li>Custom pitch creation</li>
+                        <li>Negotiation support</li>
+                        <li>Contract guidance</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Social Media Growth</h3>
+                    <p class="service-description">
+                        Strategy, content reviews, growth tactics and optimization across major platforms to increase
+                        engagement and follower quality. Build a loyal community that engages with your content.
+                    </p>
+                    <ul class="service-features">
+                        <li>Platform-specific strategies</li>
+                        <li>Content optimization</li>
+                        <li>Engagement tactics</li>
+                        <li>Analytics & insights</li>
+                    </ul>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Brand Consultation</h3>
+                    <p class="service-description">
+                        Guidance for both brands and creators to build authentic collaborations and measure campaign
+                        success. We help establish long-term partnerships that benefit everyone.
+                    </p>
+                    <ul class="service-features">
+                        <li>Partnership strategy</li>
+                        <li>Campaign planning</li>
+                        <li>Success metrics</li>
+                        <li>Post-campaign analysis</li>
+                    </ul>
+                </article>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="how-it-works">
-      <div class="wrap panel">
-        <div class="section-title"><h3>How It Works</h3></div>
-        <ol class="muted" style="margin:0 0 0 18px; padding:0;">
-          <li style="margin-bottom:8px"><strong>Sign up:</strong> Creators submit a simple profile and sample links.</li>
-          <li style="margin-bottom:8px"><strong>Matchmaking:</strong> We identify brand fits and prepare pitch kits.</li>
-          <li style="margin-bottom:8px"><strong>Negotiate &amp; Launch:</strong> Support through negotiations and campaign setup.</li>
-          <li style="margin-bottom:8px"><strong>Grow:</strong> Post-campaign analysis and growth recommendations.</li>
-        </ol>
-      </div>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Process</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-description">
+                    Four simple steps to unlock sponsorship opportunities and grow your creator business
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Sign Up</h3>
+                        <p>Creators submit a simple profile and sample links. Tell us about your content, audience, and
+                            goals. The process takes just a few minutes.</p>
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <polyline points="17 11 19 13 23 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Matchmaking</h3>
+                        <p>We identify brand fits and prepare pitch kits. Our team analyzes your profile and finds
+                            brands that align with your authentic voice and audience.</p>
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Negotiate & Launch</h3>
+                        <p>Support through negotiations and campaign setup. We guide you through contract terms,
+                            deliverables, and timelines to ensure fair partnerships.</p>
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Grow</h3>
+                        <p>Post-campaign analysis and growth recommendations. We help you measure success, learn from
+                            each partnership, and scale your creator business.</p>
+                        <div class="timeline-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="20" x2="12" y2="10"></line>
+                                <line x1="18" y1="20" x2="18" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="16"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <div class="wrap panel contact-panel">
-        <div class="section-title"><h3>Contact Us</h3><span class="pill">Reach out</span></div>
-        <div class="contact-row">
-          <div aria-hidden="true">📞</div>
-          <div><strong>Phone:</strong> <a href="tel:9022406835" style="color:var(--accent)">9022406835</a></div> <br>
-          <div><strong>Mail</strong> <a href="Mail:archittupkar@hypesync.in" style="color:var(--accent)">archittupkar@hypesync.in</a></div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Ready to Start Your Creator Journey?</h2>
+                <p class="section-description">
+                    Join hundreds of creators who are already growing with HypeSync Media
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Replace your existing form with this -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactForm">
+
+                    <!-- Access Key (Replace with yours) -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                    <!-- Optional: Redirect to thank you page -->
+                    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
+
+                    <!-- Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="platform">Primary Platform *</label>
+                            <select id="platform" name="platform" required>
+                                <option value="">Select Platform</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="twitter">Twitter/X</option>
+                                <option value="linkedin">LinkedIn</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="followers">Follower Count</label>
+                            <input type="text" id="followers" name="followers" placeholder="e.g., 10K">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profile">Profile/Channel Link *</label>
+                        <input type="url" id="profile" name="profile" required placeholder="https://...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Tell Us About Your Content *</label>
+                        <textarea id="message" name="message" rows="5" required
+                            placeholder="Share your content niche, goals, and what kind of brands you'd like to work with..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">Submit Application</button>
+                </form>
+
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h3>Email Us</h3>
+                        <p>archittupkar@hypesync.in</p>
+                    </div>
+
+                    <div class="info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <h3>Follow Us</h3>
+                        <p>@hypesync.media</p>
+                    </div>
+
+                    <div class="info-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <h3>Response Time</h3>
+                        <p>Within 48 hours</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="contact-row">
-          <div aria-hidden="true">👤</div>
-          <div><strong>CONTACT TO :</strong> TEAM HYPESYNC</div>
-        </div>
-        <p class="muted">Have a sponsorship or collaboration idea? Call or message us on the number above. As HypeSync Media is not yet a registered legal entity, please verify terms before entering any commercial agreement.</p>
-      </div>
     </section>
 
-    <section id="legal">
-      <div class="wrap">
-        <div class="section-title"><h3>Legal • Policies</h3></div>
-        <div class="legal-grid">
-          <div class="panel">
-            <h4 style="margin-top:0;color:var(--neon)">Privacy Policy</h4>
-            <p class="muted">We collect only the information you voluntarily provide through our contact methods. This information is used to respond to inquiries and to deliver services. We do not sell personal data to third parties. We may share data with service providers (email, analytics) under contract to provide the service.</p>
-          </div>
+    <!-- Legal Section -->
+    <section id="legal" class="legal-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Legal</span>
+                <h2 class="section-title">Policies & Terms</h2>
+            </div>
 
-          <div class="panel">
-            <h4 style="margin-top:0;color:var(--neon)">Terms &amp; Conditions</h4>
-            <p class="muted">By using this site you agree to our terms. HypeSync Media is not a registered legal entity yet. We provide matchmaking and advisory services but do NOT guarantee sponsorships. Any engagement should be confirmed in writing. All intellectual property on this site is owned by HypeSync Media unless stated.</p>
-          </div>
+            <div class="legal-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="privacy">Privacy Policy</button>
+                    <button class="tab-button" data-tab="terms">Terms & Conditions</button>
+                    <button class="tab-button" data-tab="disclaimer">Disclaimer</button>
+                    <button class="tab-button" data-tab="cookies">Cookie Policy</button>
+                </div>
 
-          <div class="panel">
-            <h4 style="margin-top:0;color:var(--neon)">Disclaimer</h4>
-            <p class="muted">The content on this website is for general information and does not substitute legal, financial, or professional advice. Users must verify details independently before entering contracts. HypeSync Media is not liable for direct or indirect losses from using this site.</p>
-          </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="privacy">
+                        <h3>Privacy Policy</h3>
+                        <p>We collect only the information you voluntarily provide through our contact methods. This
+                            information is used to respond to inquiries and to deliver services. We do not sell personal
+                            data to third parties. We may share data with service providers (email, analytics) under
+                            contract to provide the service.</p>
 
-          <div class="panel">
-            <h4 style="margin-top:0;color:var(--neon)">Cookie Policy</h4>
-            <p class="muted">We may use cookies to enhance user experience and analyze site traffic. You can disable cookies in your browser settings; however some features may not work as intended.</p>
-          </div>
+                        <h4>Information We Collect</h4>
+                        <ul>
+                            <li>Name and contact information provided through forms</li>
+                            <li>Social media profile links and follower statistics</li>
+                            <li>Communication preferences and inquiry details</li>
+                            <li>Analytics data for website improvement</li>
+                        </ul>
+
+                        <h4>How We Use Your Information</h4>
+                        <ul>
+                            <li>To respond to your inquiries and service requests</li>
+                            <li>To match creators with appropriate brand partnerships</li>
+                            <li>To improve our services and user experience</li>
+                            <li>To send relevant updates with your consent</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="terms">
+                        <h3>Terms & Conditions</h3>
+                        <p>By using this site you agree to our terms. HypeSync Media is not a registered legal entity
+                            yet. We provide matchmaking and advisory services but do NOT guarantee sponsorships. Any
+                            engagement should be confirmed in writing. All intellectual property on this site is owned
+                            by HypeSync Media unless stated.</p>
+
+                        <h4>Service Terms</h4>
+                        <ul>
+                            <li>Services are provided on an advisory and facilitation basis</li>
+                            <li>We do not guarantee specific sponsorship outcomes</li>
+                            <li>All partnerships require written confirmation from both parties</li>
+                            <li>Users must provide accurate information about their platforms</li>
+                        </ul>
+
+                        <h4>Intellectual Property</h4>
+                        <ul>
+                            <li>All content on this website is owned by HypeSync Media</li>
+                            <li>Users retain rights to their submitted content</li>
+                            <li>Brand and creator content remains property of respective owners</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="disclaimer">
+                        <h3>Disclaimer</h3>
+                        <p>The content on this website is for general information and does not substitute legal,
+                            financial, or professional advice. Users must verify details independently before entering
+                            contracts. HypeSync Media is not liable for direct or indirect losses from using this site.
+                        </p>
+
+                        <h4>Service Limitations</h4>
+                        <ul>
+                            <li>Information provided is for general guidance only</li>
+                            <li>We are not responsible for third-party actions or agreements</li>
+                            <li>Users should conduct their own due diligence</li>
+                            <li>Partnership outcomes depend on multiple factors beyond our control</li>
+                        </ul>
+
+                        <h4>Liability</h4>
+                        <ul>
+                            <li>HypeSync Media is not liable for partnership disputes</li>
+                            <li>We are not responsible for financial losses</li>
+                            <li>Users accept all risks associated with brand partnerships</li>
+                            <li>Seek professional advice for legal or financial matters</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-pane" id="cookies">
+                        <h3>Cookie Policy</h3>
+                        <p>We may use cookies to enhance user experience and analyze site traffic. You can disable
+                            cookies in your browser settings; however some features may not work as intended.</p>
+
+                        <h4>Types of Cookies We Use</h4>
+                        <ul>
+                            <li><strong>Essential Cookies:</strong> Required for basic website functionality</li>
+                            <li><strong>Analytics Cookies:</strong> Help us understand how visitors use our site</li>
+                            <li><strong>Preference Cookies:</strong> Remember your theme and language choices</li>
+                        </ul>
+
+                        <h4>Managing Cookies</h4>
+                        <ul>
+                            <li>You can control cookies through your browser settings</li>
+                            <li>Disabling cookies may limit website functionality</li>
+                            <li>Our theme preference is stored locally in your browser</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="wrap">
-      <div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
-        <div style="font-size:0.95rem;color:var(--muted)">© <span id="year"></span> HypeSync Media. All Rights Reserved.</div>
-        <div style="font-size:0.86rem;color:var(--muted)">Not a registered legal entity • Use at your own discretion</div>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-text">HypeSync</span>
+                        <span class="logo-accent">Media</span>
+                    </a>
+                    <p class="footer-tagline">Empowering creators, one partnership at a time.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
 
-  <button id="toTop" title="Back to top" aria-label="Scroll to top">↑</button>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                        </ul>
+                    </div>
 
-  <script>
-    // Set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#legal">Privacy Policy</a></li>
+                            <li><a href="#legal">Terms & Conditions</a></li>
+                            <li><a href="#legal">Disclaimer</a></li>
+                            <li><a href="#legal">Cookie Policy</a></li>
+                        </ul>
+                    </div>
 
-    // Smooth scrolling for internal links
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e){
-        // allow tel: and external anchors to behave normally
-        if(this.getAttribute('href').startsWith('#')){
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if(target){
-            window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
-            // close mobile menu if open
-            if(window.innerWidth < 720){
-              document.getElementById('mobileMenu').style.display = 'none';
-              document.getElementById('mobileToggle').setAttribute('aria-expanded','false');
-            }
-          }
-        }
-      });
-    });
+                    <div class="footer-column">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="#contact">Get Started</a></li>
+                            <li><a href="mailto:archittupkar@hypesync.in">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    // Mobile menu toggle
-    const toggle = document.getElementById('mobileToggle');
-    if(toggle){
-      toggle.addEventListener('click', () => {
-        const m = document.getElementById('mobileMenu');
-        const isOpen = m.style.display === 'block';
-        m.style.display = isOpen ? 'none' : 'block';
-        toggle.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
+            <div class="footer-bottom">
+                <p>&copy; 2025 HypeSync Media. All rights reserved.</p>
+                <p class="footer-note">Currently operating as an independent initiative. Not yet a registered legal
+                    entity in India.</p>
+            </div>
+        </div>
+    </footer>
 
-    // Show "back to top" on scroll
-    const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 400) toTop.style.display = 'flex'; else toTop.style.display = 'none';
-    });
-    toTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+    <!-- GSAP Library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
 
-    // Accessibility: focus outlines for keyboard users
-    document.body.addEventListener('keydown', function(e){
-      if(e.key === 'Tab') document.documentElement.style.setProperty('--focus-outline','2px solid rgba(124,92,255,0.32)');
-    });
-  </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
+
 </html>
