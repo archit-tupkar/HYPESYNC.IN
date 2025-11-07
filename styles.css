@@ -816,6 +816,7 @@ section {
    ========================================== */
 .about-section {
     background: var(--bg-secondary);
+    width: 100%;
 }
 
 .about-content {
@@ -823,6 +824,8 @@ section {
     grid-template-columns: 1fr 1.5fr;
     gap: var(--spacing-3xl);
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .about-image {
@@ -852,6 +855,9 @@ section {
     flex-direction: column;
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-xl);
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
 }
 
 .feature-item {
@@ -862,6 +868,9 @@ section {
     border-radius: var(--radius-xl);
     border: 1px solid var(--border-color);
     transition: all var(--transition-base);
+    width: 100%;
+    margin: 0 auto;
+    transform: none !important;
 }
 
 .feature-item:hover {
@@ -884,6 +893,12 @@ section {
     color: white;
 }
 
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .feature-content h3 {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-xs);
@@ -893,6 +908,7 @@ section {
     margin: 0;
     color: var(--text-secondary);
     line-height: 1.6;
+    width: 100%;
 }
 
 .about-note {
@@ -900,6 +916,7 @@ section {
     background: var(--bg-tertiary);
     border-left: 4px solid var(--color-accent);
     border-radius: var(--radius-md);
+    width: 100%;
 }
 
 .about-note p {
@@ -912,22 +929,88 @@ section {
     .about-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-2xl);
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
     }
     
     .image-placeholder svg {
         width: 80px;
         height: 80px;
     }
+
+    .about-text {
+        width: 100%;
+        padding: 0 var(--spacing-md);
+    }
+
+    .feature-list {
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 @media (max-width: 640px) {
+    .about-content {
+        padding: 0 var(--spacing-md);
+    }
+
+    .about-text {
+        padding: 0;
+    }
+
+    .feature-list {
+        gap: var(--spacing-md);
+        width: 100%;
+        padding: 0;
+    }
+
     .feature-item {
         flex-direction: column;
         text-align: center;
+        padding: var(--spacing-lg);
+        align-items: center;
+        width: 100%;
+        box-shadow: var(--shadow-sm);
+        margin: 0;
+        transform: none !important;
+    }
+
+    .feature-item + .feature-item {
+        margin-top: var(--spacing-md);
     }
     
     .feature-icon {
-        margin: 0 auto;
+        margin: 0 auto var(--spacing-sm);
+        width: 40px;
+        height: 40px;
+    }
+
+    .feature-content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .feature-content h3 {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xs);
+        width: 100%;
+        text-align: center;
+    }
+
+    .feature-content p {
+        font-size: var(--font-size-base);
+        text-align: center;
+        padding: 0 var(--spacing-xs);
+    }
+
+    .about-note {
+        margin: var(--spacing-lg) var(--spacing-sm);
+        text-align: left;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-2px);
     }
 }
 
@@ -1124,20 +1207,24 @@ section {
 }
 
 @media (max-width: 768px) {
+    .timeline {
+        padding: 0 var(--spacing-sm);
+    }
+
     .timeline-line {
-        left: 30px;
+        left: 25px;
     }
     
     .timeline-item {
-        grid-template-columns: 60px 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: 50px 1fr;
+        gap: var(--spacing-lg);
         margin-bottom: var(--spacing-2xl);
     }
     
     .step-number {
-        width: 60px;
-        height: 60px;
-        font-size: var(--font-size-2xl);
+        width: 50px;
+        height: 50px;
+        font-size: var(--font-size-xl);
     }
     
     .timeline-icon {
@@ -1145,7 +1232,20 @@ section {
     }
     
     .timeline-content {
-        padding: var(--spacing-md);
+        padding: var(--spacing-lg);
+    }
+
+    .timeline-content h3 {
+        font-size: var(--font-size-xl);
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .timeline-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    .timeline-content:hover {
+        transform: translateX(5px);
     }
 }
 
@@ -1510,3 +1610,4 @@ section {
         scroll-behavior: auto;
     }
 }
+
